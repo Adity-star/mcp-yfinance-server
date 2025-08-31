@@ -663,12 +663,34 @@ def get_yahoo_finance_news(ticker: str) -> str:
         
         results = []
         for item in news_list[:10]:  # Limit to 10 most recent
+            # Extract content from nested structure
+            content = item.get('content', {})
+            
+            # Parse publish date from pubDate field
+            pub_date = content.get('pubDate', '')
+            if pub_date:
+                try:
+                    # pubDate is already in ISO format
+                    published = pub_date
+                except:
+                    published = ''
+            else:
+                published = ''
+            
+            # Get provider information
+            provider = content.get('provider', {})
+            publisher = provider.get('displayName', '')
+            
+            # Get URL from canonicalUrl
+            canonical_url = content.get('canonicalUrl', {})
+            link = canonical_url.get('url', '')
+            
             results.append({
-                'title': item.get('title', ''),
-                'publisher': item.get('publisher', ''),
-                'link': item.get('link', ''),
-                'published': datetime.fromtimestamp(item.get('providerPublishTime', 0)).isoformat() if item.get('providerPublishTime') else '',
-                'summary': item.get('summary', '')[:200] + "..." if item.get('summary') else ''
+                'title': content.get('title', ''),
+                'publisher': publisher,
+                'link': link,
+                'published': published,
+                'summary': content.get('summary', '')[:200] + "..." if content.get('summary') else ''
             })
         
         return json.dumps(format_response({
