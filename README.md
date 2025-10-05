@@ -30,6 +30,13 @@ https://github.com/Adity-star/mcp-crypto-server
 > - Build an API with FastAPI
 > - Fetch real-time prices using the Alpaca API
 
+## 🔗 Related Projects
+Explore more of my work:
+-  [GenAI-Learnings](https://github.com/Adity-star/GenAI-Learnings): A deep dive into Generative AI concepts, tools, and projects.
+-  [LangChain-Mastery](https://github.com/Adity-star/LangChainMastery): Everything you need to master LangChain for building powerful LLM applications.
+-  [Complete Data Science](https://github.com/Adity-star/Complete-DataScience-Guide):  A deep dive into Data Science AI concepts, tools, and projects and all the material for learning and interview preparation.
+-  [Reinforcement-Learning](https://github.com/Adity-star/Reinforcement-Learning): Hands-on experiments and theory in Reinforcement Learning.
+-  [CompleteRAG](https://github.com/Adity-star/CompleteRAG): End-to-end implementation of Retrieval-Augmented Generation (RAG) systems.
 ---
 ## 📈 Then Level Up: Build the yFinance Stock Server
 Once you're familiar with the flow, move on to this more advanced stock tracker 💹
@@ -267,5 +274,6 @@ If this project saved you from API rate limits or overpriced SaaS tools...
 🚀 Let’s build better tools together.
 
 If you’d like a tweet thread, carousel, or launch post for this — I’ve got your back 😎
+
 
 
