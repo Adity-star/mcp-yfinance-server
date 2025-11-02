@@ -1,0 +1,11 @@
+httpx>=0.28.1
+mcp[cli]>=1.6.0
+yfinance>=0.2.55
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.10.1
+ipython>=9.1.0
+fastmcp>=2.11.1
+fastapi
+uvicorn
+plotly>=6.2.0
