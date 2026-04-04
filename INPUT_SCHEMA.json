@@ -1,0 +1,77 @@
+{
+  "title": "MCP YFinance Server Input",
+  "description": "Configuration for the MCP YFinance Stock Server. Define which tool to invoke and supply the required parameters.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "tool": {
+      "title": "Tool Name",
+      "type": "string",
+      "description": "The MCP tool to invoke on this run.",
+      "editor": "select",
+      "enum": [
+        "get_stock_price",
+        "compare_stocks",
+        "analyze_stock",
+        "get_technical_summary",
+        "get_trend_analysis",
+        "get_volatility_analysis",
+        "add_to_watchlist",
+        "get_watchlist_prices",
+        "get_stock_history"
+      ],
+      "enumTitles": [
+        "Get Stock Price",
+        "Compare Stocks",
+        "Analyze Stock (Technical)",
+        "Get Technical Summary",
+        "Get Trend Analysis",
+        "Get Volatility Analysis",
+        "Add to Watchlist",
+        "Get Watchlist Prices",
+        "Get Stock History"
+      ],
+      "default": "get_stock_price"
+    },
+    "ticker": {
+      "title": "Ticker Symbol",
+      "type": "string",
+      "description": "Primary stock ticker symbol (e.g. AAPL, TSLA, MSFT). Required for most tools.",
+      "editor": "textfield",
+      "example": "AAPL"
+    },
+    "ticker2": {
+      "title": "Second Ticker Symbol (for compare_stocks)",
+      "type": "string",
+      "description": "Second stock ticker for side-by-side comparison. Only used with the compare_stocks tool.",
+      "editor": "textfield",
+      "example": "TSLA"
+    },
+    "watchlist": {
+      "title": "Watchlist Tickers",
+      "type": "array",
+      "description": "List of ticker symbols to add to or retrieve from the watchlist.",
+      "editor": "stringList",
+      "example": ["AAPL", "TSLA", "MSFT"]
+    },
+    "period": {
+      "title": "History Period",
+      "type": "string",
+      "description": "Time period for historical data. Used by get_stock_history and analyze_stock.",
+      "editor": "select",
+      "enum": ["1d", "5d", "1mo", "3mo", "6mo", "1y", "2y", "5y", "10y", "ytd", "max"],
+      "enumTitles": ["1 Day", "5 Days", "1 Month", "3 Months", "6 Months", "1 Year", "2 Years", "5 Years", "10 Years", "Year to Date", "Max"],
+      "default": "1mo"
+    },
+    "interval": {
+      "title": "Data Interval",
+      "type": "string",
+      "description": "Granularity of historical data points.",
+      "editor": "select",
+      "enum": ["1m", "5m", "15m", "30m", "1h", "1d", "1wk", "1mo"],
+      "enumTitles": ["1 Minute", "5 Minutes", "15 Minutes", "30 Minutes", "1 Hour", "1 Day", "1 Week", "1 Month"],
+      "default": "1d"
+    }
+  },
+  "required": ["tool"]
+}
