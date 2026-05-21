@@ -4,6 +4,8 @@
 ![Python](https://img.shields.io/badge/python-3.10-blue)
 ![MCP](https://img.shields.io/badge/MCP-Compatible-green)
 ![License](https://img.shields.io/github/license/Adity-star/mcp-yfinance-server)
+[![Listed on Spark](https://spark.entire.vc/badges/listed.svg)](https://spark.entire.vc/assets/vb-yfinance?utm_source=github&utm_medium=readme)
+[![Install via Spark](https://spark.entire.vc/badges/vb-yfinance/install.svg)](https://spark.entire.vc/assets/vb-yfinance?utm_source=github&utm_medium=readme)
 
 
 This project sets up a **stock Price server** powered by the **Yahoo Finance (YFinance)** API and built for seamless integration with **MCP (Model Control Protocol)**.
